@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Gilbertofolio</title>
+</head>
+
+<body>
+    <nav class="menu">
+        <div class="left-nav">
+            <h1 class="logo" id="whitext">GCR</h1>
+        </div>
+        <div class="right-nav">
+            <a href="#" id="whitext2" class="nav-link">Sobre mi</a>
+            <a href="#" id="whitext3" class="nav-link">Habilidades</a>
+            <a href="#" id="whitext4" class="nav-link">Proyectos</a>
+            <img class="sun-icon" id="sun" onclick="applyDarkMode()"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAA4JJREFUWEftmFfIj1Ecxz/vHbJXkUSIMkNZWUX2SBEJKUXJKhdGuOCCspWRSEJE2Xtky0xIckHIlb0io5zv23nqOP7//znP875G8bt8zm98z2+fp4i/nIr+cnz8UwDbA71tRD4Ci0ojOqXpwWnAUgvqNVDlP8CUHvhjHiwLzAFmBQBPBZZZnpdAtQD/POADsLgQXygHKwKHgY7AaaAvoALIRWmKxPX2BGBdPpAhgBuBsY7wOQvyfcrwu+wCtMaTr2fsPMqlMwSwMnASaO0IX7IezYJxILDXExwJbMvqQclVAI6bULezSoYAu/MobAhUBe4Bb3PwlAeOGH2d7NlQYFdJcjCRlWIpUkKf8BT2ABS2PkA55+w2sN0AXgm4KaGi2wmsz+HNn7CGQlzocgr/VpuThfheAGOAg1lyIivA6oByUSGNJRXbpljmhC8rwDNAF8eY+pnCtsX0zG9AA0B9sZkHqC1wPQ3ILAAHAXscI3eAroCas0+TbA4m348Zz/f61QBPAd2tkTfGc02BpwWMrgXGO+fy7oNYkL4HBxvvtPKED5lCuGK/qZrfOeczgYUBY9pqXO8q9CscmRlGRxlPh7ai4jblA1QSq+Jcmmzm6ir7oRFw3znUCFSxhOga0MYyrQYmOgJazSp5CuoCT7IAVDiVcwnJ6I0QOttiNMdF6o0jfhVAbSjPHeXDgR0RAB+aFqN5K1oOaFlIKJUHI2zhGjtg2saAgJDakdpSQrGXKubP0mYWALMdg+OADXlA1gSuAsopkQqstjf6Ct4vC8AawGOv8qabpWKJZ6mlzbcmzve5wPyYMCU8WQBKViuSpoZLaiVaEETaaJp755fN0tsN+PQ7AMrGFJvwMfYuAppAboHFyKXKwc6ANmqX1AfVVJNd0Tf6yr6P/TdyB+CWfZOUSg4Os+1Es1TTxn+XKN/62bGnyXHXXuZojpD2N017P3De7pAFnw8xOejn21m7HESFyGPSUqvRmZDysqc3Pn8QCQEcbXe4hO+r8Y68mW/lD4HWSNMFWziMN+2Fcz0Rgjk4CtjsKFOi7wuhCJyrTSmXG1s+Vb6qO9e6FgQoHQKlV5c8V2htT/NnoZYJ7QVAEdED6lm+S4VCnMgp8VWRhSjtn4X65m/F58AuGeXB2Iim8WCszv8Aoz1V0hyMMVTHeYZ+sUUQI1cqk6TEhrIqiK3irPpLLPcdXrmpKTFb0ZsAAAAASUVORK5CYII=" />
+
+            <img class="moon-icon" id="moon" onclick="removeDarkMode()"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAtNJREFUWEftmE2ITWEYx3//SA2JKSEbCyllYShfC02kycRkpQYZGxbKRikKJcrCSpQFsqCIjc8mMuQrC4V8b3wUCyVlSPlIPe6je+s4c8655z33HjPJW7fu4vn/n9997nve93mOGOJLQ5yPfx/QzLokXSjrnyhUQTObA6wFuoE7krqGBKCZzQcOA9MjQJsk7RtUQDMbXgHYCWwFhsVg2iQ9HDRAM5sKnAJmJkD0S2otC859M/egmU0B7gFjUiCeSYr+3U1nTQU0s5FVuGkZWd9JmtR0qohhFuAJYGWd5F8l+Q8pbSUCmlk7cD1n1hZJ33LGBoelAT6JHSVZxjMkPQrOnFMwANDM1gDHcuo9bK+kLQHxQaFJgGeB5QEub4HJkixAkzv0D0Az80P4c6UqoRu/XdLN3FkDAuOAi4CrAfpa6G1JCwro6krigBuAg3VVyQHbJO0pqE2VxQF3ATsKJvkJzJV0v6A+URYHPASsbyDBKz+emnkuxgG9lVrXAKBL7wIrJL1p0Oe3PA64G9jeBONPQI+k8416xQE3AgcaNY3o3WuzpB9FPeOAi4ErRc1SdF7Na8BloE/SyzR/M1sGTJR0pBaTdJP4QT26yZBRu4/AY+A54N+9XRsPzAPGAqskncwCPO2bvETALGvvilqjp0BSBZcCFwcJ8LiknmjutHbLD9ukGaRs7k5Jl/IAdgK9ZdPE/PsqM3ZHvCvKavn/5l58DcyS1B8vShbgCOBG9ekqs5jfgdmS/MkesOqNnT7z3gpo/4v8kNWSfEBLXHXfzZiZz8RnKtVcWCR7hsaPlG5J57J86wK6uNppH/X7tUmQ74Elkh7U88sFWDMxs47KuxlvKPztVpH1pXrX+6A14IEI3oNpBGbmQ5W3ZX535lkvAL++9kv6kEdQiwmqYNzYzEZVIduACcA4oAVwCP94T9gr6WkIVDS2IcCiSUN0/wFDqpUU+wuofMcp3nkUkQAAAABJRU5ErkJggg==" />
+
+            <button id="cv-button" class="nav-button">Descargar CV</button>
+        </div>
+    </nav>
+    <div class="personal-info">
+        <div class="p-div-l">
+            <h2 id="whitext5" class="subtitle">Hola, soy Gilbert Ramírez</h2>
+            <p id="whitext6" class="pe-text">Soy un programador apasionado y curioso con una gran energía para aprender
+                y mejorar cada
+                día. Me gusta explorar nuevas tecnologías y profundizar en conceptos para expandir mis habilidades.
+                Disfruto enfrentar desafíos y encontrar soluciones eficientes, optimizando cada proyecto en el que
+                trabajo. Mi enfoque se centra en mejorar continuamente.</p>
+        </div>
+        <div class="p-div-r">
+            <img src="/img/yo.jpg" class="me" alt="">
+        </div>
+    </div>
+
+    <div class="skills">
+        <div class="skills-info">
+            <div class="s-grid">
+                <h2 id="whitext7" class="j-subtitle">Habilidades</h2>
+                <p id="whitext8" class="j-text">En este apartado se encuentran cada uno de los lenguajes que tengo
+                    cierto manejo.</p>
+            </div>
+        </div>
+        <div class="skills-icons">
+            <div class="skills-grid">
+                <div class="icons-row">
+                    <div class="skilltech">
+                        <img class="s-icons" src="/img/html.png" alt="">
+                        <h3 id="whitext9" class="icon-name">HTML</h3>
+                    </div>
+                    <div class="skilltech">
+                        <img class="s-icons" src="/img/css.png" alt="">
+                        <h3 id="whitext0" class="icon-name">CSS</h3>
+                    </div>
+                    <div class="skilltech">
+                        <img class="s-icons" src="/img/js.png" alt="">
+                        <h3 id="whitext10" class="icon-name">JavaScript</h3>
+                    </div>
+                </div>
+
+                <div class="icons-row">
+
+                    <div class="skilltech">
+                        <img class="s-icons" src="/img/jquery.png" alt="">
+                        <h3 id="whitext11" class="icon-name">JQuery</h3>
+                    </div>
+
+                    <div class="skilltech">
+                        <img class="s-icons" src="/img/php-removebg-preview.png" alt="">
+                        <h3 id="whitext12" class="icon-name">PHP</h3>
+                    </div>
+
+                    <div class="skilltech">
+                        <img class="s-icons" src="/img/figma.png" alt="">
+                        <h3 id="whitext13" class="icon-name">Figma</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="project">
+        <div class="grid">
+            <div class="project-info">
+                <h2 id="whitext14" class="subtitle">Proyectos</h2>
+                <p id="whitext15" class="pe-text">En este apartado se encuentran cada uno de los proyectos
+                    en los que he trabajado.</p>
+            </div>
+
+            <div class="project-g-content">
+
+                <div class="project1">
+
+                    <div class="img-container">
+                        <img class="p-img" src="img/textwaste.PNG" alt="">
+                    </div>
+
+                    <div class="text-container">
+                        <h3 class="big-text">TextWaste.INC</h3>
+                        <p class="project-text">Trabajo grupal. dedicado a solucionar la contaminación textil.
+                            (Incompleto)</p>
+                        <div class="languajes">
+
+                            <svg class="icon1" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" ;transform: ;msFilter:;">
+                                <path
+                                    d="M4.136 3.012h15.729l-1.431 16.15-6.451 1.826-6.414-1.826-1.433-16.15zm5.266 7.302-.173-2.035 7.533.002.173-1.963-9.87-.002.522 5.998h6.835l-.243 2.566-2.179.602-2.214-.605-.141-1.58H7.691l.247 3.123L12 17.506l4.028-1.08.558-6.111H9.402v-.001z">
+                                </path>
+                            </svg>
+
+                            <svg class="icon2" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" ;transform: msFilter">
+                                <path
+                                    d="M4.192 3.143h15.615l-1.42 16.034-6.404 1.812-6.369-1.813L4.192 3.143zM16.9 6.424l-9.8-.002.158 1.949 7.529.002-.189 2.02H9.66l.179 1.913h4.597l-.272 2.62-2.164.598-2.197-.603-.141-1.569h-1.94l.216 2.867L12 17.484l3.995-1.137.905-9.923z">
+                                </path>
+                            </svg>
+
+                            <svg class="icon3" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" transform: msFilter">
+                                <path
+                                    d="M3 3h18v18H3V3zm16.525 13.707c-.131-.821-.666-1.511-2.252-2.155-.552-.259-1.165-.438-1.349-.854-.068-.248-.078-.382-.034-.529.113-.484.687-.629 1.137-.495.293.09.563.315.732.676.775-.507.775-.507 1.316-.844-.203-.314-.304-.451-.439-.586-.473-.528-1.103-.798-2.126-.775l-.528.067c-.507.124-.991.395-1.283.754-.855.968-.608 2.655.427 3.354 1.023.765 2.521.933 2.712 1.653.18.878-.652 1.159-1.475 1.058-.607-.136-.945-.439-1.316-1.002l-1.372.788c.157.359.337.517.607.832 1.305 1.316 4.568 1.249 5.153-.754.021-.067.18-.528.056-1.237l.034.049zm-6.737-5.434h-1.686c0 1.453-.007 2.898-.007 4.354 0 .924.047 1.772-.104 2.033-.247.517-.886.451-1.175.359-.297-.146-.448-.349-.623-.641-.047-.078-.082-.146-.095-.146l-1.368.844c.229.473.563.879.994 1.137.641.383 1.502.507 2.404.305.588-.17 1.095-.519 1.358-1.059.384-.697.302-1.553.299-2.509.008-1.541 0-3.083 0-4.635l.003-.042z">
+                                </path>
+                            </svg>
+
+
+                        </div>
+                        <a href="https://github.com/Plataer/Textwaste" class="project-button">Visitar</a>
+                    </div>
+
+                </div>
+
+                <div class="project2">
+
+                    <div class="img-container">
+                        <img class="p-img" src="img/ultrateni.png" alt="">
+                    </div>
+                    <div class="text-container">
+                        <h3 class="big-text">Ultratenic</h3>
+                        <p class="project-text">Tienda online para comprar calzados (prueba)</p>
+                        <div class="languajes">
+                            <svg class="icon1" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" ;transform: ;msFilter:;">
+                                <path
+                                    d="M4.136 3.012h15.729l-1.431 16.15-6.451 1.826-6.414-1.826-1.433-16.15zm5.266 7.302-.173-2.035 7.533.002.173-1.963-9.87-.002.522 5.998h6.835l-.243 2.566-2.179.602-2.214-.605-.141-1.58H7.691l.247 3.123L12 17.506l4.028-1.08.558-6.111H9.402v-.001z">
+                                </path>
+                            </svg>
+                            <svg class="icon2" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" ;transform: msFilter">
+                                <path
+                                    d="M4.192 3.143h15.615l-1.42 16.034-6.404 1.812-6.369-1.813L4.192 3.143zM16.9 6.424l-9.8-.002.158 1.949 7.529.002-.189 2.02H9.66l.179 1.913h4.597l-.272 2.62-2.164.598-2.197-.603-.141-1.569h-1.94l.216 2.867L12 17.484l3.995-1.137.905-9.923z">
+                                </path>
+                            </svg>
+                            <svg class="icon3" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" transform: msFilter">
+                                <path
+                                    d="M3 3h18v18H3V3zm16.525 13.707c-.131-.821-.666-1.511-2.252-2.155-.552-.259-1.165-.438-1.349-.854-.068-.248-.078-.382-.034-.529.113-.484.687-.629 1.137-.495.293.09.563.315.732.676.775-.507.775-.507 1.316-.844-.203-.314-.304-.451-.439-.586-.473-.528-1.103-.798-2.126-.775l-.528.067c-.507.124-.991.395-1.283.754-.855.968-.608 2.655.427 3.354 1.023.765 2.521.933 2.712 1.653.18.878-.652 1.159-1.475 1.058-.607-.136-.945-.439-1.316-1.002l-1.372.788c.157.359.337.517.607.832 1.305 1.316 4.568 1.249 5.153-.754.021-.067.18-.528.056-1.237l.034.049zm-6.737-5.434h-1.686c0 1.453-.007 2.898-.007 4.354 0 .924.047 1.772-.104 2.033-.247.517-.886.451-1.175.359-.297-.146-.448-.349-.623-.641-.047-.078-.082-.146-.095-.146l-1.368.844c.229.473.563.879.994 1.137.641.383 1.502.507 2.404.305.588-.17 1.095-.519 1.358-1.059.384-.697.302-1.553.299-2.509.008-1.541 0-3.083 0-4.635l.003-.042z">
+                                </path>
+                            </svg>
+                            <svg class="icon4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" transform: msFilter">
+                                <path
+                                    d="M3.345 6.935c-1.756 2.523-1.538 5.806-.196 8.487l.098.19c.021.04.041.082.063.121.012.024.026.047.039.069a7.842 7.842 0 0 0 .198.344l.073.12a9.14 9.14 0 0 0 .211.33 10.179 10.179 0 0 0 .221.319l.036.049c.063.088.129.175.196.261l.074.094.182.223.069.082c.082.097.167.194.252.289l.005.005c.004.004.007.006.01.011.083.091.17.181.256.271l.083.083.205.201.084.08c.092.087.186.172.281.256l.004.004.049.041c.083.073.169.145.255.215l.105.084a11.03 11.03 0 0 0 .565.424c.029.021.057.042.087.062l.024.017c.076.053.154.103.231.153.033.022.066.045.101.067a10.975 10.975 0 0 0 .886.509c.065.034.129.068.195.101l.045.022.08.039c.102.048.205.097.308.143l.066.029c.119.052.239.102.36.149l.088.035a13.895 13.895 0 0 0 .382.142c.125.044.252.085.38.124l.092.028c.128.039.256.085.39.11 8.492 1.548 10.958-5.102 10.958-5.102-2.072 2.698-5.748 3.41-9.232 2.618-.132-.03-.261-.071-.39-.109l-.097-.029a10.929 10.929 0 0 1-.755-.264l-.093-.036c-.12-.047-.239-.097-.356-.148l-.071-.031a11.932 11.932 0 0 1-.301-.14l-.087-.042c-.078-.038-.155-.079-.232-.118-.051-.027-.104-.053-.155-.082a8.294 8.294 0 0 1-.278-.156l-.094-.052a11.4 11.4 0 0 1-.363-.223l-.098-.065a10.557 10.557 0 0 1-.259-.172l-.083-.059c-.082-.058-.164-.116-.244-.176a11.921 11.921 0 0 1-.328-.255l-.099-.079c-.092-.076-.184-.152-.274-.231a12.01 12.01 0 0 1-.319-.288c-.028-.026-.055-.051-.081-.078a7.985 7.985 0 0 1-.208-.203l-.081-.081a10.76 10.76 0 0 1-.254-.269l-.012-.012a11.75 11.75 0 0 1-.258-.293l-.067-.081a10.313 10.313 0 0 1-.254-.313 11.855 11.855 0 0 1-.215-.286C3.864 11.825 3.17 8.186 4.715 5.198">
+                                </path>
+                                <path
+                                    d="M8.794 4.809c-1.27 1.827-1.2 4.273-.21 6.205.166.324.353.639.561.938.191.273.401.597.654.816.092.101.187.199.284.295l.076.074c.094.092.19.182.291.271l.011.01.003.002c.111.097.224.19.34.281l.078.06a8.281 8.281 0 0 0 .366.268c.053.037.108.072.161.107.026.017.051.035.078.051a7.14 7.14 0 0 0 .301.184c.076.044.155.087.233.13.026.015.055.029.082.043.055.028.108.057.163.083a9.645 9.645 0 0 0 .365.171l.074.031c.093.039.186.077.281.113l.117.044c.086.032.171.06.256.089l.117.037c.121.038.243.085.37.107 6.556 1.086 8.068-3.961 8.068-3.961-1.364 1.964-4.006 2.902-6.825 2.17a7.866 7.866 0 0 1-.743-.232l-.118-.043a7.629 7.629 0 0 1-.353-.145 8.79 8.79 0 0 1-.344-.159c-.057-.028-.113-.058-.17-.087l-.099-.051a9.352 9.352 0 0 1-.533-.313l-.08-.053a7.65 7.65 0 0 1-.602-.435c-1.234-.974-2.213-2.306-2.678-3.815-.488-1.566-.382-3.323.462-4.75">
+                                </path>
+                                <path
+                                    d="M13.379 3.221c-.749 1.102-.823 2.469-.304 3.686.548 1.292 1.671 2.304 2.981 2.785a3.85 3.85 0 0 0 .234.079c.077.024.152.053.233.067 3.62.699 4.601-1.857 4.862-2.234-.86 1.239-2.306 1.536-4.078 1.105a5.403 5.403 0 0 1-.939-.344 5.39 5.39 0 0 1-.895-.545c-1.585-1.204-2.573-3.501-1.536-5.372">
+                                </path>
+                            </svg>
+                        </div>
+                        <a href="https://github.com/Plataer/Textwaste" class="project-button">Visitar</a>
+                    </div>
+
+                </div>
+                <!-- Ultratenic  Tienda para comprar calzado en linea -->
+
+                <div class="project3">
+
+                    <div class="img-container">
+                        <img class="p-img" src="img/elysium.PNG" alt="">
+                    </div>
+
+                    <div class="text-container">
+                        <h3 class="big-text">Elysium</h3>
+                        <p class="project-text">Trabajo grupal. Plataforma virtual con fin de mejorar la educación.</p>
+                        <div class="languajes">
+
+                            <svg class="icon1" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" ;transform: ;msFilter:;">
+                                <path
+                                    d="M4.136 3.012h15.729l-1.431 16.15-6.451 1.826-6.414-1.826-1.433-16.15zm5.266 7.302-.173-2.035 7.533.002.173-1.963-9.87-.002.522 5.998h6.835l-.243 2.566-2.179.602-2.214-.605-.141-1.58H7.691l.247 3.123L12 17.506l4.028-1.08.558-6.111H9.402v-.001z">
+                                </path>
+                            </svg>
+
+                            <svg class="icon2" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" ;transform: msFilter">
+                                <path
+                                    d="M4.192 3.143h15.615l-1.42 16.034-6.404 1.812-6.369-1.813L4.192 3.143zM16.9 6.424l-9.8-.002.158 1.949 7.529.002-.189 2.02H9.66l.179 1.913h4.597l-.272 2.62-2.164.598-2.197-.603-.141-1.569h-1.94l.216 2.867L12 17.484l3.995-1.137.905-9.923z">
+                                </path>
+                            </svg>
+
+                            <svg class="icon3" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" transform: msFilter">
+                                <path
+                                    d="M3 3h18v18H3V3zm16.525 13.707c-.131-.821-.666-1.511-2.252-2.155-.552-.259-1.165-.438-1.349-.854-.068-.248-.078-.382-.034-.529.113-.484.687-.629 1.137-.495.293.09.563.315.732.676.775-.507.775-.507 1.316-.844-.203-.314-.304-.451-.439-.586-.473-.528-1.103-.798-2.126-.775l-.528.067c-.507.124-.991.395-1.283.754-.855.968-.608 2.655.427 3.354 1.023.765 2.521.933 2.712 1.653.18.878-.652 1.159-1.475 1.058-.607-.136-.945-.439-1.316-1.002l-1.372.788c.157.359.337.517.607.832 1.305 1.316 4.568 1.249 5.153-.754.021-.067.18-.528.056-1.237l.034.049zm-6.737-5.434h-1.686c0 1.453-.007 2.898-.007 4.354 0 .924.047 1.772-.104 2.033-.247.517-.886.451-1.175.359-.297-.146-.448-.349-.623-.641-.047-.078-.082-.146-.095-.146l-1.368.844c.229.473.563.879.994 1.137.641.383 1.502.507 2.404.305.588-.17 1.095-.519 1.358-1.059.384-.697.302-1.553.299-2.509.008-1.541 0-3.083 0-4.635l.003-.042z">
+                                </path>
+                            </svg>
+
+                        </div>
+                        <a href="https://github.com/Plataer/Textwaste" class="project-button">Visitar</a>
+                    </div>
+
+                </div>
+                <!-- Elysium la para la mejor plataforma vortial educativa  -->
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <h3 class="copyright">© 2024 Gilbert Castillo - Todos los derechos reservados</h3>
+
+            <div class="social-media">
+                <div class="social-icons">
+                    <a href="https://x.com/Silverprogamer2">
+                        <img class="media-icons"
+                            src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAAAXNSR0IArs4c6QAAAfdJREFUSEvtlc2LTmEYxn8XMRMLUiPNJNnYzMIGG5NEpmyUJKzkK0VZ2MwfYDdsZUFTNjOhmcWk2FigSNPIR7JigWYhK18l5XLuOq/eOc45z5n3rVnIszmdnvu+f89zPfeHWMSlRWTxH1aqtu11wC5gI/AFuCbpe8vY9or2/3ky2t4DvJH0NvWWtg9EcGB1m20AzwGvgWPAPUm3WvtF2CSwFdgu6X0V0PYg8BRYXnOo68ApoEfS17Arwp4A24B3wGFJj8uC2Z4C9teAfgKPgFDopKRfZbBx4EgexMAlYFTSp/bAtuMw6xNST4SUkn5UyXgGuFwSJG54B3iW3eg58AJYlYD1FQ9ZlLEfuAEMpRIksR+yLWvJV3WzB8C3TO9hYEkXwDlJA0X/4s3a36wLFjclHUrBtgAz3VBy3xOSxmphsZll2nHgahcyRmEPSIrvvPVXI7a9BrgAHAVWdnDLKJWRMr/Srm/7PrCjA1DU46CkjwuBrQUeApsWCNwr6W6VT+U8s90DnM564L4MvLsBdETSaJ1dHWxD9mYXgYMJULS1s5KupA70B2Y7ZlJk4ubQPZ9RqUk+GyNFUjTd5CoWdTTX8/loqMrED8BtYFpS9MvGqyobe4Gd+Wxbmh3gcybnK+ClpLnG0VN11mmgJn6pN2kSo7HNvwv7DRPVkRxPfpaYAAAAAElFTkSuQmCC" />
+                    </a>
+
+                    <a href="https://www.facebook.com/gustabo.garcia.169067/">
+                        <img class="media-icons"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAAAXNSR0IArs4c6QAAAQtJREFUSEvtlKFKREEUhr8PxCz4AgYFUYNPIIYF2wZRLAafQATBal6DxbbYLCKIwSfYYjapTyBqsBiMR4UrDMvi3cu9OyyL04aZ+T/O+f8zknGZkcX4wyJiGtgA5oEW8Arcqed/dapyZRGxCFwDS33CPXW9MVhETAEPwMIA0cZhu8BFH+gReAPu1YMmK+sAR4ngpnozbKIrefbt1yWwk4jPqu+jgl0B2yODRcQqMFMAjoE0cW3gozh7UZ9qeRYRPWBtiFadqoe5YPvqWS5YW72tC9sD5gqRLWA5ETwBPot9V32uBUsf545+1jn7hw3MyVj/jZPr2c9QrySGdNTfoS79Pit5VqpWcmFyYV+5XHAcLp3ZLwAAAABJRU5ErkJggg==" />
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/gilbert-castillo-ram%C3%ADrez-78aa592bb/">
+                        <img class="media-icons"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAAAXNSR0IArs4c6QAAAYVJREFUSEvtlr0uREEYhp+3Q0GnEAoKF+AObDYSBReg8RdRIOJvE4VCIvEvIqvZECRcAQUR4Q5UEjQaiWi0dGNHvpMcJ2yOzTm7jWnOzOTkfeab729EBYcqyKJ6MOdcC9AH1CZg8TtwIuk50PpmmXMuD4wlAAok8pImfoMdAv0Jwo4kDcSBPQAbQBMwA9SXcYjYsB5JZx7gnNsGJtOE9Uo6NdgWMJUm7B5YB5qBaaAhTVhc7ZdiujwCbYBPnfCI7bNBST46vc/2gGGgU9KN7R0Dy5LubO3TaA2YDdHKgu0DQ0BG0rWJ10j6iJrvnPNR3G77icEagcWiNXVATtKrHWIHCBI5MVgBGDELFiQtGWzOrtMvE4NdAlmDFSSNGsxXoC9flws7AHzZyUq6MlH/zURFnXP/MBeu+uE8S/0aV4Fz80kO6LaydWt7m0CHzS+AFZt3AfN/DZC45arUfyVDP+lOvStpPDhN9FnQCvjeVU6Fj1r45puupKcfYUncWymN6j3l0rbsE4qLByubQWMQAAAAAElFTkSuQmCC" />
+                    </a>
+
+                    <a href="https://www.instagram.com/gilbol0/profilecard/?igsh=aDFscGhmZXZuMWc2">
+                        <img class="media-icons"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAAAXNSR0IArs4c6QAAAv5JREFUSEvNllmIjnEUxn+PErmTG4wsc0FS9pGGIcouxaDIbmQJpVwgu1AuZF/K1IwsSShjlyyRpsgWhbIvkXLhRpLjf6b3m975vO83My6mOVdf33vO/3nPc57z/F/RgKEGxKLxgJlZPtAL6AY0ycHCH+Ap8EDSq7S8xM7MLA84Bgz6D5pvAVMlfcyu/QfMzLyLO0ALYDfwEPgAWA5g77o90AdYBPwACiU9i9fUADOz5sAToANQIOlRXTszs46AdzMAuA68BLpL+pk5IxtsDHAO2CtpcT2A5gELgabAWmBKmOEkYJykijSwNUEIG4Gxks5ng5lZgT8DeroYAm0Vku6b2QJgf5RfDLQEDjmwpE1pYDuBpX5YnEIzawUcDBT7QdlxIsx3Wzi8Xejui6RKMxsJXPSZS/LzqiKbRn+buUAnSW8ySWZ2BhgNbAH8t8+jMzABWAmckuTUVYWZDQZueHdBlU5xIlg5MANoK+lzVDgCuATskbQkgdoDwHxgoCRXsYMVAb4CpZJK0sAOA9OBPEmfosKtwApgiCR/2xphZsOBywFjnSSft4O5Im8DZZJmp4GVATNDUseQ9DYq9JlMBrpIepEA1jU89306KmlaVNMPqAzjKA/jmFUbWL6k11HhZmBVjs6GhQW+Eua/QdL6qKY/cLeunVULxMwyhx2R5BRn05jpvEiSU+c0FkYulFMgpcAcoLqzqPg0MN4HDuyKqXE54NQdDxRPjanRPfWm754kt69ENboXunP0kPQ4Vux7dirYkEs6O9yaiiV9j+VnFLxD0rI0sNWAb3wNm4m6c7N16fcGWge5+2rcA/ZJ8iumOszMd9V3drUkn3liZ25F7mX18saEOZ4EJgJjJF1IA3PXfx6sqU0w5L5xKhPoS/zLzIYC14ITvXeXSXX9iK6M+n4B26PC33UAaxZ2a1REtVM+XNLVeF3aTe0OsCdy9zrg1Ej5Gi7bkvjVkkhjAvdJ3yBto1v5HVBlabHw/86Gu/Bb0hs2nq+r+vJXW36DdvYXNUclK/9PzQMAAAAASUVORK5CYII=" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="script.js"></script>
+
+</html>
